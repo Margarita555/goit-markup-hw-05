@@ -15,6 +15,8 @@
   --secondary-border-color: #ececec;
   --company-border-color: #afb1b8;
   --hero-background-color: rgba(47, 48, 58, 0.4);
+  --label-background-color: rgba(47, 48, 58, 0.8);
+  --portfolio-overlay-color: rgba(33, 150, 243, 0.9);
 }
 
 body {
@@ -119,6 +121,23 @@ img {
   color: var(--accent-color);
 }
 
+.site-nav-item {
+  position: relative;
+}
+
+.site-nav .active::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
@@ -188,7 +207,6 @@ img {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -271,6 +289,28 @@ img {
 .work-direction-title {
   margin-bottom: 50px;
 }
+
+.direction-titles {
+  color: var(--primary-background-color);
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.direction-label {
+  position: absolute;
+  padding: 27px;
+  height: 70px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  background-color: var(--label-background-color);
+}
+
 .direction-list {
   display: flex;
   flex-basis: calc((100%-90px) / 3);
@@ -279,6 +319,7 @@ img {
 }
 
 .direction-list-item {
+  position: relative;
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -504,6 +545,7 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   display: inline-block;
+  /* z-index: 2; */
 }
 
 .portfolio-set-link:hover {
@@ -537,5 +579,33 @@ img {
   padding: 20px 24px;
   border: 1px solid var(--primary-border-color);
   border-top: 0;
+}
+
+/* .portfolio-set-item {
+  position: relative;
+} */
+
+.portfolio-set-thumb {
+  position: relative;
+  /* display: inline-block; */
+
+  /* z-index: 1; */
+}
+.description {
+  position: absolute;
+  width: calc(100%-30px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+
+  background-color: var(--portfolio-overlay-color);
+}
+.description-text {
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-background-color);
 }
 /* ==================== Portfolio END ====================== */
