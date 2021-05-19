@@ -552,18 +552,6 @@ img {
   margin-bottom: -30px;
 }
 
-/* .portfolio-set-link {
-  flex-basis: calc((100%-90px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-  display: inline-block;
-} */
-
-/* .portfolio-set-link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-} */
-
 .portfolio-title {
   margin-bottom: 4px;
 
@@ -653,13 +641,25 @@ img {
 
   min-width: 528px;
   min-height: 581px;
-  /* padding: ; */
+  /* padding: 8px; */
   background-color: var(--primary-background-color);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-color: rgba(184, 118, 118, 0.1);
+  background-color: transparent;
 }
 
 /* ==================== Modal window END====================== */
