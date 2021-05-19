@@ -114,7 +114,7 @@ img {
 }
 
 .site-nav .item:not(:last-child) {
-  margin-right: 25px;
+  margin-right: 50px;
 }
 
 .site-nav .active {
@@ -185,11 +185,10 @@ img {
 }
 
 .overlay {
-  padding-bottom: 210px;
+  padding: 200px 0;
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
-  height: 600px;
   background-image: linear-gradient(
       var(--hero-background-color),
       var(--hero-background-color)
@@ -199,7 +198,6 @@ img {
 }
 
 .hero-title {
-  padding-top: 200px;
   margin-bottom: 30px;
 
   color: var(--primary-background-color);
@@ -207,9 +205,11 @@ img {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
 .hero-button {
   padding: 10px 32px;
 
@@ -385,7 +385,7 @@ img {
   justify-content: center;
   height: 44px;
   width: 44px;
-  fill: var(--primary-text-color);
+  fill: var(--company-border-color);
 
   border-radius: 50px;
 }
@@ -425,6 +425,18 @@ img {
 
 .client-list-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.client-list-icon {
+  fill: var(--company-border-color);
+}
+
+.client-list-item:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.client-list-item:hover .client-list-icon {
+  fill: var(--accent-color);
 }
 /* =============== Client list section END =============== */
 /* ======================== FOOTER ========================= */
@@ -540,18 +552,17 @@ img {
   margin-bottom: -30px;
 }
 
-.portfolio-set-link {
+/* .portfolio-set-link {
   flex-basis: calc((100%-90px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
   display: inline-block;
-  /* overflow: hidden; */
-}
+} */
 
-.portfolio-set-link:hover {
+/* .portfolio-set-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+} */
 
 .portfolio-title {
   margin-bottom: 4px;
@@ -563,8 +574,16 @@ img {
   letter-spacing: 0.06em;
 }
 
-.portfolio-set-item {
+.portfolio-set > .item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
   background-color: var(--primary-background-color);
+}
+
+.portfolio-set > .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(27, 27, 27, 0.16);
 }
 
 .portfolio-set .text {
@@ -616,3 +635,31 @@ img {
   color: var(--primary-background-color);
 }
 /* ==================== Portfolio END ====================== */
+/* ==================== MODAL WINDOW ==================+==== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+  /* padding: ; */
+  background-color: var(--primary-background-color);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ==================== Modal window END====================== */

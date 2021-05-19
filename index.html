@@ -23,7 +23,7 @@
     <header class="header">
         <div class="container header-container">
             <a href="./index.html" lang="en" class="logo link">
-                <span class="colortext">Web</span> Studio
+                <span class="colortext">Web</span>Studio
             </a>
             <nav>
                 <ul class="site-nav list">
@@ -52,7 +52,7 @@
         <section class="hero">
             <div class="overlay">
                 <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-                <button type="button" class="hero-button">Заказать услугу</button>
+                <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <!-----------Features section------------>
@@ -272,17 +272,17 @@
                         </svg>
                     </a></li>
                 <li class="item client-list-item"><a class="link" href="#">
-                        <svg class="icon client-list-icon" width="166" height="100">
+                        <svg class="icon client-list-icon" width="145" height="80">
                             <use href="./images/icons.svg#clientfour"></use>
                         </svg>
                     </a></li>
                 <li class="item client-list-item"><a class="link" href="#">
-                        <svg class="icon client-list-icon" width="146" height="70">
+                        <svg class="icon client-list-icon" width="130" height="70">
                             <use href="./images/icons.svg#clientfive"></use>
                         </svg>
                     </a></li>
                 <li class="item client-list-item"><a class="link" href="#">
-                        <svg class="icon client-list-icon" width="166" height="100">
+                        <svg class="icon client-list-icon" width="145" height="80">
                             <use href="./images/icons.svg#clientsix"></use>
                         </svg>
                     </a></li>
@@ -338,6 +338,14 @@
             </div>
         </div>
     </footer>
+<!-------Modal window------->
+   <div class="backdrop is-hidden" data-modal>
+       <div class="modal">
+           <button data-modal-close>Cross</button>
+       </div>
+   </div>
+
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
