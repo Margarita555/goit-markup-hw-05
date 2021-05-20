@@ -51,7 +51,6 @@ img {
 }
 
 /* ====================== COMPONENTS ======================= */
-
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -111,6 +110,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .item:not(:last-child) {
@@ -158,6 +159,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav-link:hover,
@@ -176,6 +179,7 @@ img {
 
 .nav-icon {
   margin-right: 7px;
+  fill: currentColor;
 }
 
 /* ==================== Header END ========================= */
@@ -195,6 +199,7 @@ img {
     ),
     url(../images/studioimages/heroimage.jpg);
   background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -380,13 +385,16 @@ img {
 }
 
 .social-list-link {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* the 'background-color' is written with white letters */
   display: flex;
   align-items: center;
   justify-content: center;
   height: 44px;
   width: 44px;
-  fill: var(--company-border-color);
 
+  fill: var(--company-border-color);
   border-radius: 50px;
 }
 
@@ -394,7 +402,6 @@ img {
 .social-list-link:focus {
   background-color: var(--accent-color);
   fill: var(--primary-background-color);
-  color: var(--primary-background-color);
 }
 
 .social-icon:hover,
@@ -414,6 +421,8 @@ img {
 }
 
 .client-list-item {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -465,12 +474,15 @@ img {
 }
 
 .contacts-footer {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   color: var(--secondary-text-color);
   font-family: var(--main-font);
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
 }
+
 .contacts-footer:hover,
 .contacts-footer:focus {
   color: var(--accent-color);
@@ -523,6 +535,10 @@ img {
 }
 
 .filters-button {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   padding: 6px 22px;
   cursor: pointer;
 
