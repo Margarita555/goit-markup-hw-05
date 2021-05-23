@@ -632,7 +632,6 @@ img {
 }
 
 .portfolio-set-link:hover .description {
-  opacity: 1;
   transform: translate(0);
 }
 
@@ -699,6 +698,7 @@ img {
   border-radius: 50%;
   border-color: rgba(184, 118, 118, 0.1);
   background-color: transparent;
+  cursor: pointer;
 }
 
 .modal-close-icon {
